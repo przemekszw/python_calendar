@@ -27,12 +27,6 @@ class Downloader():
             time = s.time(x)
             lista_godzina2.append(time)
 
-        """
-        for x in range(len(lista_godzina2)):
-            lista.append(lista_terminy[licznik])
-            lista.append(lista_godzina2[licznik])
-            licznik += 1
-        """
 
         data_dict = {}
 
@@ -44,6 +38,15 @@ class Downloader():
                 data_dict[termin].append(godzina)
             else:
                 data_dict[termin] = [godzina]
+
+            """
+            Pętla do zapisywania wszystkiego w liście
+            
+              for x in range(len(lista_godzina2)):
+                  lista.append(lista_terminy[licznik])
+                  lista.append(lista_godzina2[licznik])
+                  licznik += 1
+            """
 
         return data_dict
 
